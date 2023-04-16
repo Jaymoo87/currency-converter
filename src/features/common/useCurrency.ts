@@ -42,7 +42,7 @@ export const useCurrency = () => {
 
   const currencyList = symbolsData.data ? Object.keys(symbolsData.data) : [];
 
-  console.log(symbolsData);
+  // console.log(ratesData.data);
 
   return {
     amount,
