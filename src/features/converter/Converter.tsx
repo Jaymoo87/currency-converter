@@ -4,6 +4,8 @@ import { Text, Spinner, Box } from "@chakra-ui/react";
 import { useCurrency } from "../common/useCurrency";
 import ConverterHeader from "./components/converter-header";
 import ConverterOption from "./components/converter-option";
+import ConverterInput from "./components/converter-input";
+import ConverterDisplay from "./converter-display";
 
 const Converter = () => {
   const {
@@ -50,6 +52,8 @@ const Converter = () => {
         onCurrencyChange={setCurrencyTwo}
         currency={currencyTwo}
       />
+      <ConverterInput value={amount} onAmountChange={setAmount} />
+      <ConverterDisplay />
     </Box>
   );
 };
