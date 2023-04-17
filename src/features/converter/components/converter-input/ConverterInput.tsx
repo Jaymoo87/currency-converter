@@ -9,7 +9,7 @@ const ConverterInput = ({ value, onAmountChange }: any) => {
       </FormLabel>
       <Input
         shadow={"xl"}
-        bgColor="#B5DDA4"
+        bg="#B5DDA4"
         borderColor="#754668"
         id="amount"
         size="lg"
@@ -17,7 +17,7 @@ const ConverterInput = ({ value, onAmountChange }: any) => {
         value={value}
         min={0}
         onChange={(e) => onAmountChange(e.target.value)}
-        focusBorderColor="#F9ECCC"
+        focusBorderColor="#4DAA57"
       ></Input>
     </>
   );

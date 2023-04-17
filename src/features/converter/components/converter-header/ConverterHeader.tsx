@@ -4,10 +4,10 @@ import { Box, Text } from "@chakra-ui/react";
 const ConverterHeader = () => {
   return (
     <Box textAlign="center" color="white" marginTop="20" marginBottom="10">
-      <Text fontWeight="bold" fontSize="3xl">
+      <Text fontWeight="bold" fontSize="3xl" color="#F9ECCC">
         Currency Converter
       </Text>
-      <Text fontWeight="light" fontSize="2xl">
+      <Text fontWeight="light" fontSize="2xl" color="#F9ECCC">
         Up to date FX rates
       </Text>
     </Box>

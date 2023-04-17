@@ -1,6 +1,6 @@
 import { useQueries } from "@tanstack/react-query";
 import { useState } from "react";
-import { fetchRates, fetchSymbols } from "../converter/api/fetchData";
+import { fetchRates, fetchSymbols } from "../../converter/api/fetchData";
 
 interface useCurrencyProps {
   amount: number;
@@ -10,8 +10,8 @@ interface useCurrencyProps {
 
 export const useCurrency = () => {
   const [amount, setAmount] = useState(25);
-  const [currencyOne, setCurrencyOne] = useState("USD");
-  const [currencyTwo, setCurrencyTwo] = useState("EUR");
+  const [currencyOne, setCurrencyOne] = useState<string>("USD");
+  const [currencyTwo, setCurrencyTwo] = useState<string>("EUR");
 
   const [ratesData, symbolsData] = useQueries({
     queries: [
@@ -22,6 +22,7 @@ export const useCurrency = () => {
         select: ({ rates, date, timestamp }: any) => {
           return { rates, date, timestamp };
         },
+        keepPreviousData: true,
       },
       {
         queryKey: ["symbols"],
